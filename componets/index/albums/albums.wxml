@@ -1,0 +1,9 @@
+<view class="flex,m-top2,a-align" wx:for="{{search.albums}}" wx:key="index" data-id="{{item.id}}" bind:tap="goAlbum">
+      <view ><image src="{{item.blurPicUrl}}" mode="widthFix" class="cover-img" /></view>
+      <view class="m-left2,track">
+          {{item.name}}
+          <view class="hot-2">{{item.artist.name}}
+              <span class="m-left1">{{item.publishTime}}</span>
+          </view>
+      </view>
+  </view>

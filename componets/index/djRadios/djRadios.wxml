@@ -1,0 +1,7 @@
+ <view class="flex,a-align,m-top2" wx:for="{{search.djRadios}}" wx:key="index">
+          <view ><image src="{{item.picUrl}}" mode="widthFix" class="cover-img" /></view>
+          <view class="m-left2">
+              {{item.name}}
+              <view class="hot-2,m-top2">{{item.dj.nickname}}</view>
+          </view>
+</view>

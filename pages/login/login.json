@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "van-button": "../../lib/dist/button/index",
+        "emailLogin": "../../componets/login/emailLogin/emailLogin"
+    }
+}

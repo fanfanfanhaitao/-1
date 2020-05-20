@@ -1,0 +1,6 @@
+
+  <view class="flex,j-content,a-align,m-top2" wx:for="{{search.artists}}" wx:key="index">
+      <view class="flex,a-align"><image src="{{item.img1v1Url}}" class="player" /><span class="m-left2">{{item.name}}</span></view>
+      <view class="track-4,flex,a-align"><image src="../../../assets/images/ruzhu.png" class="track-3" /><span class="hot-2,m-left2">已入驻</span>
+      </view>
+  </view>

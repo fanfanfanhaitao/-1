@@ -1,0 +1,55 @@
+/* componets/singerDetails/songs/songs.wxss */
+
+.playall {
+    padding-left: 20rpx;
+    width: 55rpx;
+    height: 55rpx;
+}
+
+.sp-1 {
+    padding-left: 10rpx;
+    font-weight: 550;
+    font-size: 36rpx;
+}
+
+.plmv {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.list-1 {
+    width: 100%;
+    margin: 0 auto;
+    height: 120rpx;
+}
+
+.play-name1 {
+    width: 400rpx;
+    font-size: 30rpx;
+}
+
+.p-name {
+    width: 400rpx;
+    font-size: 24rpx;
+    color: #AEAEAE;
+    padding-top: 10rpx;
+}
+
+.list-2 {
+    width: 20%;
+}
+
+.list-3 {
+    right: 20rpx;
+}
+
+.p-box {
+    width: 500rpx;
+}
+
+.index {
+    width: 80rpx;
+    text-align: center;
+    font-size: 34rpx;
+    color: #AEAEAE;
+}

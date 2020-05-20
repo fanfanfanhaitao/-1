@@ -1,0 +1,23 @@
+<view class="content">
+<view class="t-color">推荐歌单</view>
+<view class="flex,head1,j-content">
+    <view class="t-color1,m-top1">为你精挑细选</view>
+    <view class="more" bind:tap="go">查看更多</view>
+</view>
+<scroll-view  scroll-x   class='scroll-container'>
+<view class="flex,result">
+    <view wx:for="{{result}}" wx:key="index" class="relative" data-id="{{item.id}}" bind:tap="goToList">
+        <view class="absolute,play,flex,a-align">
+            <image src="../../../assets/images/playcount.png" class="imgplay"></image>
+             {{item.playCount}}<span class="wan">万</span>
+        </view>
+       <view class="m-left2,m-top2"> <image src="{{item.picUrl}}" class="image"> </image>
+            <view class="result1">{{item.name}}</view>
+       </view>
+    
+    </view>
+</view>
+</scroll-view>
+
+
+</view>

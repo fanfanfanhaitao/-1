@@ -1,0 +1,48 @@
+<view class="relative">
+    <image class="head-1" src="{{list.playlist.coverImgUrl}}" />
+    <view class="body,absolute,flex,a-align,j-content">
+     <view bind:tap="backTo"> <image src="../../assets/images/back.png" class="back"></image></view>
+      <view >歌单</view>
+    </view>
+    <view class="flex,absolute,name,j-content">
+        <view class="relative">
+            <view class="absolute,play,flex,a-align">
+            <image src="../../assets/images/playcount.png" class="imgplay"></image>
+             {{list.playlist.playCount}}<span class="wan">万</span>
+           </view>
+             <view ><image src="{{list.playlist.coverImgUrl}}" class="cover" /></view>
+        </view>
+        <view class="m-left2">
+            <view class="name-color">{{list.playlist.name}}</view>
+             <view class="flex,a-align,name-color1"><image src="{{list.playlist.creator.avatarUrl}}" class="nike" />
+                      <span class="l-padding1">{{list.playlist.creator.nickname}}</span>
+             </view>
+             <view class="over,m-top2">{{list.playlist.description}}</view>
+        </view>
+    </view>
+    <view class="flex,j-content,absolute,downloda">
+        <view class="text-center">
+            <image src='../../assets/images/xx.png' class="src" />
+             <view class="m-top1">{{list.playlist.commentCount}}</view>
+        </view>
+         <view  class="text-center">
+            <image src='../../assets/images/fx.png' class="src" />
+            <view  class="m-top1">{{list.playlist.shareCount}}</view>
+        </view>
+         <view  class="text-center">
+            <image src='../../assets/images/down.png' class="src" />
+             <view  class="m-top1">下载</view>
+        </view>
+         <view  class="text-center">
+            <image src='../../assets/images/dx.png' class="src" />
+            <view  class="m-top1">多选</view>
+        </view>
+    </view>
+  <view class="top-1,absolute">
+      <playlist playlist="{{playlist}}" subscribedCount="{{subscribedCount}}"></playlist>
+  </view>
+         
+         
+         
+   
+</view>

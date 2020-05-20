@@ -1,0 +1,33 @@
+
+ <view class="flex,a-align">
+        <image src="../../../assets/images/tj.png" class="playall" />
+        <span class="sp-1">收藏热门{{songs.hotSongs.length}}</span>
+ </view>
+  <view class="list-1,flex,a-align,j-content" wx:for="{{songs.hotSongs}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" bind:tap="playSong">
+         <view class="flex,a-align,overflow,p-box">
+             <view class="index">{{index+1}}</view>
+            <view > 
+               <view class="play-name1,overflow">{{item.name}}</view>
+               <view class="p-name,overflow">{{item.al.name}}</view>
+            </view>
+        </view>
+         <view class="flex,list-2,a-align,relative">
+           <view wx:if="{{item.mv!==0}}"><image src="../../../assets/images/plmv.png" class="plmv" /></view>
+           <view class="absolute,list-3"><image src="../../../assets/images/mall.png" class="plmv" /></view>
+        </view>
+</view>
+<view class="play-song"  bind:tap="go" wx:if="{{number===1}}">
+    <view class="songs-p,flex,a-align,j-content">
+    <view class="flex,a-align">
+    <image src="{{img}}" class="img-song"/>
+    <view class="m-left2">
+        <view >{{name}}</view>
+        <view class="song-name">{{avaut}}</view>
+    </view>
+    </view>
+    <view class="flex,a-align">
+      <view catch:tap="player"><image src="{{num===0 ? '../../../assets/images/suspend.png' : '../../../assets/images/playsong.png'}}" class="suspend" /></view>
+         <image src="../../../assets/images/songs.png" class="suspend,m-left3" />
+    </view>
+    </view>
+</view>

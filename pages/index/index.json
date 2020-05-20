@@ -1,0 +1,18 @@
+{
+    "usingComponents": {
+        "van-search": "../../lib/dist/search/index",
+        "sheet": "../../componets/index/sheet/sheet",
+        "newplay": "../../componets/index/newplay/newplay",
+        "newForces": "../../componets/index/newForces/newForces",
+        "search": "../../componets/index/search/search",
+        "van-sticky": "../../lib/dist/sticky/index",
+        "playLists": "../../componets/index/playLists/playLists",
+        "comprehensive": "../../componets/index/comprehensive/comprehensive",
+        "songs": "../../componets/index/songs/songs",
+        "artists": "../../componets/index/artists/artists",
+        "albums": "../../componets/index/albums/albums",
+        "videos": "../../componets/index/videos/videos",
+        "djRadios": "../../componets/index/djRadios/djRadios",
+        "users": "../../componets/index/users/users"
+    }
+}

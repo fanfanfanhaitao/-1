@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/player/player",
+        "pages/my/my",
+        "pages/songSheet/songSheet",
+        "pages/singerDetails/singerDetails",
+        "pages/album/album",
+        "pages/login/login",
+        "pages/register/register",
+        "pages/playSong/playSong"
+
+
+    ],
+
+    "requiredBackgroundModes": ["audio"],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#CB1C36",
+
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#0D0D0D",
+        "selectedColor": "#CB1C36",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "网易云音乐",
+                "iconPath": "./assets/images/home.png",
+                "selectedIconPath": "./assets/images/home1.png"
+            },
+            {
+                "pagePath": "pages/player/player",
+                "text": "歌手",
+                "iconPath": "./assets/images/play.png",
+                "selectedIconPath": "./assets/images/play1.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "./assets/images/my.png",
+                "selectedIconPath": "./assets/images/my1.png"
+            }
+        ]
+    },
+
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "van-search": "../../../lib/dist/search/index",
+        "van-tag": "../../../lib/dist/search/index"
+    }
+}

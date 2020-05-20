@@ -1,0 +1,28 @@
+<view class="relative">
+   <image src="{{detail.al.picUrl}}" class="playsong"/>
+</view>
+<view class="absolute,p-song">
+ <view class="title,m-top2">{{detail.name}}</view>
+    <view class="name-p,m-top2">歌手：{{name}}</view>
+    <image src="{{detail.al.picUrl}}" class="music,music-on" />
+    <view class="flex,j-content,p-src">
+        <view>
+            <image src='../../assets/images/xx.png' class="src" />
+        </view>
+         <view  >
+            <image src='../../assets/images/fx.png' class="src" />
+        </view>
+         <view  >
+            <image src='../../assets/images/down.png' class="src" />
+        </view>
+         <view >
+            <image src='../../assets/images/dx.png' class="src" />
+        </view>
+    </view>
+       <view class='audio_progress'>
+      <slider block-size='14' bindchange='audioChange' bindchanging='audioChanging' value='{{sliderValue}}'></slider>
+      <view>{{musicTime}}</view>
+    </view>
+
+
+</view>

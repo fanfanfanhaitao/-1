@@ -1,0 +1,44 @@
+ <view class="flex,a-align">
+        <image src="../../../assets/images/playmore.png" class="playall" />
+        <span class="sp-1">播放热门{{songs.hotSongs.length}}</span>
+ </view>
+  <view class="list-1,flex,a-align,j-content" wx:for="{{songs.hotSongs}}" wx:key="index" wx:if="{{index<5}}" 
+  data-id="{{item.id}}" data-img="{{item.al.picUrl}}" data-title="{{item.name}}" data-index="{{index}}" bind:tap="playSong">
+         <view class="flex,a-align,overflow,p-box">
+             <view class="index">{{index+1}}</view>
+            <view > 
+               <view class="play-name1,overflow">{{item.name}}</view>
+               <view class="p-name">{{item.al.name}}</view>
+            </view>
+        </view>
+         <view class="flex,list-2,a-align,relative">
+           <view wx:if="{{item.mv!==0}}"><image src="../../../assets/images/plmv.png" class="plmv" /></view>
+           <view class="absolute,list-3"><image src="../../../assets/images/mall.png" class="plmv" /></view>
+        </view>
+</view>
+<view class="text-more" bind:tap="moreSong">更多热歌</view>
+<view class="f-line"></view>
+<view class="m-content">
+<view class="j-msg">基本信息</view>
+<view class="p-name-1">
+    <view >昵称：{{songs.artist.name}} {{songs.artist.alias[0]}}</view>
+    <view class="desc">简介：{{songs.artist.briefDesc}}</view>
+</view>
+<view class="text-more" bind:tap="moreSong">更多信息</view>
+<view class="f-line"></view>
+</view>
+<view class="play-song" wx:if="{{number===1}}" bind:tap="go">
+    <view class="songs-p,flex,a-align,j-content">
+    <view class="flex,a-align">
+    <image src="{{img}}" class="img-song"/>
+    <view class="m-left2">
+        <view >{{name}}</view>
+        <view class="song-name">{{avaut}}</view>
+    </view>
+    </view>
+    <view class="flex,a-align">
+      <view catch:tap="player"><image src="{{num===0 ? '../../../assets/images/suspend.png' : '../../../assets/images/playsong.png'}}" class="suspend" /></view>
+         <image src="../../../assets/images/songs.png" class="suspend,m-left3" />
+    </view>
+    </view>
+</view>

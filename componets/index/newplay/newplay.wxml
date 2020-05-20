@@ -1,0 +1,26 @@
+<view class="flex,j-content,play-head">
+   <view class="flex,play-name,a-align,j-content">
+       <view class="{{active===0 ? 'active' : ''}}" bind:tap="click">新歌</view>
+       <view >︱</view>
+       <view class="{{active===1 ? 'active' : ''}}" bind:tap="click">新碟</view>
+   </view>
+    <view class="more" >{{active===0?'更多新歌':'更多新碟'}}</view>
+</view>
+<view class="play-head">
+<view wx:if="{{active===0}}">
+   <view class="flex,wrap,j-content" >
+       <view class="m-top2,blur" wx:for="{{data}}" wx:key="index">
+           <image src="{{item.album.blurPicUrl}}" class="blururl" />
+           <view>{{item.name}}</view>
+       </view>
+  </view> 
+  </view>    
+<view wx:if="{{active===1}}">
+    <view class="flex,wrap,j-content" >
+       <view class="m-top2,blur" wx:for="{{albums}}" wx:key="index" data-id="{{item.id}}" bind:tap="goAlbum">
+           <image src="{{item.blurPicUrl}}" class="blururl" />
+           <view>{{item.name}}</view>
+       </view>
+     </view> 
+  </view>
+</view>

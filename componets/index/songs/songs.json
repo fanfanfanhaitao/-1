@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "van-sticky": "../../../lib/dist/sticky/index"
+    }
+}

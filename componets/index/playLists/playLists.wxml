@@ -1,0 +1,9 @@
+<view class="flex,m-top2,a-align" wx:for="{{search.playlists}}" wx:key="index">
+     <view ><image src="{{item.coverImgUrl}}"  mode="widthFix" class="cover-img" /></view>
+     <view class="m-left2,track">
+         <view class="overflow,track-1">{{item.name}}</view>
+         <view class="flex,hot-2">{{item.trackCount}}首歌曲 by<span class="overflow,track-2">{{item.creator.nickname}},</span> 
+             播放{{item.playCount}}次
+         </view>
+     </view>
+ </view>

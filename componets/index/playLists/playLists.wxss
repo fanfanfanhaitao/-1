@@ -1,0 +1,22 @@
+.cover-img {
+    width: 150rpx;
+    border-radius: 10rpx;
+}
+
+.track {
+    line-height: 50rpx;
+}
+
+.track-1 {
+    width: 550rpx;
+}
+
+.hot-2 {
+    font-size: 24rpx;
+    color: #ABABAB;
+}
+
+.track-2 {
+    margin-left: 10rpx;
+    width: 150rpx;
+}

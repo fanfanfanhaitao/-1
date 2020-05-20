@@ -1,0 +1,109 @@
+
+<view wx:if="{{mv.length>0}}" >
+<view >你可能感兴趣</view>
+ <view class="flex,a-align,m-top2" wx:for="{{mv}}" wx:key="index">
+    <view ><image src="{{item.cover}}" class="cover-item" mode="widthFix" /></view>
+    <view class="m-left2,line-h">
+      <view >视频: <span class="sp-1">{{item.name}}</span></view>
+      <view class="artistName">{{item.artistName}}</view>
+    </view>
+ </view>
+</view>
+<view wx:if="{{artist.length>0}}" >
+<view >你可能感兴趣</view>
+ <view class="flex,a-align,m-top2" wx:for="{{artist}}" wx:key="index" data-id="{{item.id}}" bind:tap="goSinger">
+    <view ><image src="{{item.img1v1Url}}" class="cover-item1"  /></view>
+    <view class="m-left2,line-h">
+      <view >歌手: <span class="sp-1">{{item.name}}({{item.alias[0]}})</span></view>
+      <view class="artistName">粉丝:{{item.fansSize}}万 歌曲:{{item.musicSize}} 专辑:{{item.albumSize}}</view>
+    </view>
+ </view>
+</view>
+<view wx:if="{{album.length>0}}" >
+<view >你可能感兴趣</view>
+ <view class="flex,a-align,m-top2" wx:for="{{album}}" wx:key="index" data-id="{{item.id}}" bind:tap="goAlbum">
+    <view ><image src="{{item.picUrl}}" class="cover-item2" mode="widthFix" /></view>
+    <view class="m-left2,line-h">
+      <view >专辑: <span class="sp-1">{{item.name}}</span></view>
+      <view class="artistName">{{item.artist.name}}</view>
+    </view>
+ </view>
+</view>
+<view class="flex,head1,j-content">
+    <view class="t-color1,m-top1">单曲</view>
+    <view class="more" bind:tap="go">播放全部</view>
+</view>
+ <view class="list-1,flex,a-align,j-content" wx:for="{{search.song.songs}}" wx:key="index">
+         <view class="flex,a-align">
+            <view > <view class="play-name1">{{item.name}}<van-tag wx:if="{{item.officialTags.length>0}}" color="#ED6963" class="m-left2">{{item.officialTags}}</van-tag></view>
+                   <view class="p-name">{{item.ar[0].name}} - {{item.al.name}}</view>
+            </view>
+        </view>
+         <view class="flex,list-2,a-align,relative">
+           <view wx:if="{{item.mv!==0}}"><image src="../../../assets/images/plmv.png" class="plmv" /></view>
+           <view class="absolute,list-3"><image src="../../../assets/images/mall.png" class="plmv" /></view>
+         </view>
+</view>
+<view class="text-more">{{search.song.moreText}}</view>
+ <view class="t-color1,m-top1">歌单</view>
+ <view class="flex,m-top2,a-align" wx:for="{{search.playList.playLists}}" wx:key="index" data-id="{{item.id}}" bind:tap="goToList">
+     <view ><image src="{{item.coverImgUrl}}"  mode="widthFix" class="cover-img" /></view>
+     <view class="m-left2,track">
+         <view class="overflow,track-1">{{item.name}}</view>
+         <view class="flex,hot-2">{{item.trackCount}}首歌曲 by<span class="overflow,track-2">{{item.creator.nickname}},</span> 
+             播放{{item.playCount}}万次
+         </view>
+     </view>
+ </view>
+ <view class="text-more">{{search.playList.moreText}}</view>
+  <view class="t-color1,m-top1">歌手</view>
+  <view class="flex,j-content,a-align,m-top2" wx:for="{{search.artist.artists}}" wx:key="index"  data-id="{{item.id}}" bind:tap="goSinger">
+      <view class="flex,a-align"><image src="{{item.img1v1Url}}" class="player" /><span class="m-left2">{{item.name}}</span></view>
+      <view class="track-4,flex,a-align"><image src="../../../assets/images/ruzhu.png" class="track-3" /><span class="hot-2,m-left2">已入驻</span></view>
+  </view>
+  <view class="text-more">{{search.artist.moreText}}</view>
+  <view class="t-color1,m-top1">专辑</view>
+  <view class="flex,m-top2,a-align" wx:for="{{search.album.albums}}" wx:key="index" data-id="{{item.id}}" bind:tap="goAlbum">
+      <view ><image src="{{item.blurPicUrl}}" mode="widthFix" class="cover-img" /></view>
+      <view class="m-left2,track">
+          {{item.name}}
+          <view class="hot-2">{{item.artist.name}}</view>
+      </view>
+  </view>
+   <view class="text-more">{{search.artist.moreText}}</view>
+
+   <view class="t-color1,m-top1">视频</view>
+   <view class="flex,m-top2,a-align,relative" wx:for="{{search.video.videos}}" wx:key="index">
+       <view class="absolute,play,flex,a-align">
+            <image src="../../../assets/images/playcount.png" class="imgplay"></image>
+             {{item.playTime}}<span >万</span>
+        </view>
+       <view ><image src="{{item.coverUrl}}" class="c-img" /></view>
+       <view class="m-left2">
+           <view class="v-title">{{item.title}}</view>
+           <view class="hot-2,m-top2">by {{item.creator[0].userName}}</view>
+       </view>
+   </view>
+   <view class="text-more">{{search.video.moreText}}</view>
+    <view class="t-color1,m-top1">电台</view>
+    <view class="flex,a-align,m-top2" wx:for="{{search.djRadio.djRadios}}" wx:key="index">
+          <view ><image src="{{item.picUrl}}" mode="widthFix" class="cover-img" /></view>
+          <view class="m-left2">
+              {{item.name}}
+              <view class="hot-2">{{item.dj.nickname}}</view>
+          </view>
+    </view>
+    <view class="text-more">{{search.djRadio.moreText}}</view>
+
+    <view class="t-color1,m-top1">用户</view>
+    <view class="flex,a-align,m-top2"  wx:for="{{search.user.users}}" wx:key="index">
+        <image src="{{item.avatarUrl}}" class="player" />
+        <view class="m-left2">
+            <view class="flex,a-align">{{item.nickname}}
+                <image wx:if="{{item.gender===1}}" src="../../../assets/images/man.png" class="m-left2,man" />
+                <image wx:if="{{item.gender===2}}" src="../../../assets/images/gril.png" class="m-left2,man" />
+            </view>
+             <view class="overflow,ture,m-top1,hot-2">{{item.signature}}</view>
+        </view>
+    </view>
+     <view class="text-more">{{search.user.moreText}}</view>

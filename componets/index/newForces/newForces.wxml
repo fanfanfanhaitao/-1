@@ -1,0 +1,32 @@
+<view class="play-head,m-top2">
+<view class="flex,head1,j-content">
+    <view class="t-color1,m-top1">音乐新势力</view>
+    <view class="more" bind:tap="go">新音乐</view>
+</view>
+<view class="flex,wrap,j-content" >
+       <view class="m-top2,blur" wx:for="{{Song}}" wx:key="index" wx:if="{{index<6}}">
+           <image src="{{item.picUrl}}" class="blururl" />
+           <view>{{item.song.name}}</view>
+       </view>
+  </view> 
+  <view class="flex,head1,j-content,m-top2">
+    <view class="t-color1,m-top1">推荐电台</view>
+    <view class="more" bind:tap="go">电台广场</view>
+</view>
+<view class="flex,wrap,j-content" >
+       <view class="m-top2,blur" wx:for="{{program}}" wx:key="index" wx:if="{{index<6}}">
+           <image src="{{item.picUrl}}" class="blururl" />
+           <view>{{item.name}}</view>
+       </view>
+  </view> 
+   <view class="flex,head1,j-content,m-top2">
+    <view class="t-color1,m-top1">推荐节目</view>
+    <view class="more" bind:tap="go">更多节目</view>
+</view>
+<view class="flex,wrap,j-content" >
+       <view class="m-top2,blur" wx:for="{{more}}" wx:key="index" wx:if="{{index<6}}">
+           <image src="{{item.coverUrl}}" class="blururl" />
+           <view>{{item.name}}</view>
+       </view>
+  </view> 
+</view>

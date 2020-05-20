@@ -1,0 +1,41 @@
+.box {
+    width: 400%;
+    height: 100rpx;
+    margin-left: 20rpx;
+    padding-right: 30rpx;
+    background-color: white;
+}
+
+.box-1 {
+    width: 300%;
+    height: 100rpx;
+    margin-left: 20rpx;
+    padding-right: 30rpx;
+    background-color: white;
+}
+
+.line {
+    height: 4.5rpx;
+    background: red;
+    margin-top: 10rpx;
+}
+
+.color {
+    color: red;
+}
+
+.a-head {
+    width: 92%;
+    margin: 0 auto;
+}
+
+.img-pic {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 150rpx;
+}
+
+.name {
+    margin-left: 50rpx;
+    font-weight: bold;
+}

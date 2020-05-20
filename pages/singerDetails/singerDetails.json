@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "van-tag": "../../lib/dist/tag/index",
+        "home": "../../componets/singerDetails/home/home",
+        "van-sticky": "../../lib/dist/sticky/index",
+        "songs": "../../componets/singerDetails/songs/songs",
+        "hotAlbums": "../../componets/singerDetails/hotAlbums/hotAlbums",
+        "mvs": "../../componets/singerDetails/mvs/mvs"
+    }
+}

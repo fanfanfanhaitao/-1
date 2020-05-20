@@ -1,0 +1,36 @@
+<view class="flex,a-align,j-content3,my" wx:if="{{active===0}}">
+<view class="text-center ">
+    <text >您还没有登录哦</text>
+    <button class="m-top2,but" bind:tap="goLogin">立即登录</button>
+</view>
+</view>
+<view wx:elif="{{active===1}}">
+   <view class="flex,a-align,j-content,my-content" >
+       <view class="flex,a-align">
+   <image src="{{arr.profile.avatarUrl}}" class="avatar" />
+   <view class="m-left3"> <view class="name">{{arr.profile.nickname}}</view>
+          <view class="level,m-top2,m-left3">lv: {{arr.level}}</view>
+   </view>
+   </view>
+   <view class="tab">签到</view>
+   </view>
+   <view class="flex,j-content,content-m">
+     <view class="text-center">
+         {{arr.profile.eventCount}}
+         <view class="color-my">动态</view>
+     </view>
+       <view class="text-center">
+         {{arr.profile.follows}}
+         <view class="color-my">关注</view>
+     </view>
+       <view class="text-center">
+         {{arr.profile.followeds}}
+         <view class="color-my">粉丝</view>
+     </view>
+       <view class="text-center">
+        <image src="../../assets/images/xiugai.png" class="modify" />
+         <view class="color-my">编辑资料</view>
+     </view>
+   </view>
+   <button class="button" bind:tap="esc">退出登录</button>
+</view>

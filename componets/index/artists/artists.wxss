@@ -1,0 +1,17 @@
+.player {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 150rpx;
+}
+
+.track-3 {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.track-3 {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 40rpx;
+    background-color: #DD001B;
+}

@@ -1,0 +1,11 @@
+/* componets/index/djRadios/djRadios.wxss */
+
+.hot-2 {
+    font-size: 24rpx;
+    color: #ABABAB;
+}
+
+.cover-img {
+    width: 150rpx;
+    border-radius: 10rpx;
+}

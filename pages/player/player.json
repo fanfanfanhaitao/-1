@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "van-sticky": "../../lib/dist/sticky/index"
+    },
+    "enablePullDownRefresh": true
+
+
+
+}

@@ -1,0 +1,25 @@
+
+    <van-sticky>
+         <scroll-view  scroll-x   class='scroll-container'>
+    <view class="flex,j-content,a-align,box">
+      <view wx:for="{{typeList}}" wx:key="index"  >
+        <view data-index='{{index}}' data-cat="{{item.id}}" bind:tap="clickItem1" class="{{active===index ? 'color' : ''}}">{{item.name}}</view>
+        <view class="line" wx:if="{{active===index}}"></view>
+      </view>
+      </view>
+        </scroll-view>
+    <scroll-view  scroll-x wx:if="{{active!==0}}"  class='scroll-container'>
+    <view class="flex,j-content,a-align,box-1">
+      <view wx:for="{{typeList[0].initial}}" wx:key="index"  >
+        <view data-index='{{index}}' data-initial="{{item}}" bind:tap="clickItem" class="{{number===index ? 'color' : ''}}">{{item}}</view>
+        <view class="line" wx:if="{{number===index}}"></view>
+      </view>
+      </view>
+        </scroll-view>
+    </van-sticky>
+    <view class="a-head">
+<view class="flex,a-align,m-top2" wx:for="{{artists}}" wx:key="index" data-id="{{item.id}}" data-title="{{item.name}}"  bind:tap="goPlayer">
+    <view ><image src="{{item.picUrl}}" class="img-pic" /></view>
+    <view class="name">{{item.name}}</view>
+</view>
+</view>

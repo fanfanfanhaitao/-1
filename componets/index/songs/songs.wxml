@@ -1,0 +1,17 @@
+
+<van-sticky offset-top="{{ 50 }}">
+ <view  class="p-head">播放全部</view>
+</van-sticky>
+ <view class="list-1,flex,a-align,j-content" wx:for="{{search.songs}}" wx:key="index">
+         <view class="flex,a-align,overflow,p-box">
+            <view > <view class="play-name1">{{item.name}}<van-tag wx:if="{{item.officialTags.length>0}}" color="#ED6963" class="m-left2">
+                {{item.officialTags}}</van-tag>
+            </view>
+            <view class="p-name">{{item.artists[0].name}} - {{item.name}}</view>
+            </view>
+        </view>
+         <view class="flex,list-2,a-align,relative">
+           <view wx:if="{{item.mv!==0}}"><image src="../../../assets/images/plmv.png" class="plmv" /></view>
+           <view class="absolute,list-3"><image src="../../../assets/images/mall.png" class="plmv" /></view>
+         </view>
+</view>

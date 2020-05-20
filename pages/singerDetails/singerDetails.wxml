@@ -1,0 +1,34 @@
+<view class="relative">
+<image src="{{songs.artist.picUrl}}"  class="pic-bg" />
+<view class="absolute,name,flex,j-content">
+    <view class="m-left2">
+       {{songs.artist.name}}
+    </view>
+    <view >
+        <van-tag round type="danger" size="large">+关注</van-tag>
+        <van-tag round plain  size="large">发私信</van-tag>
+    </view>
+</view>
+<view class="sing-content,absolute">
+        <van-sticky>
+    <view class="flex,j-content,a-align,box">
+     <view wx:for="{{list}}" wx:key="index"  >
+        <view data-index='{{index}}'  bind:tap="clickItem" class="{{active===index ? 'color' : ''}}">{{item.title}}</view>
+        <view class="line" wx:if="{{active===index}}"></view>
+     </view>
+  </view>
+    </van-sticky>
+    <view wx:if="{{active===0}}">
+        <home songs="{{songs}}" bind:moreSong="moreSong" avaut="{{avaut}}"></home>
+    </view>
+      <view wx:if="{{active===1}}">
+       <songs songs="{{songs}}"></songs>
+    </view>
+     <view wx:if="{{active===2}}">
+      <hotAlbums album="{{album}}"></hotAlbums>
+    </view>
+     <view wx:if="{{active===3}}">
+     <mvs mvs="{{mvs}}"></mvs>
+    </view>
+</view>
+</view>

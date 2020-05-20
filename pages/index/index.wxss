@@ -1,0 +1,81 @@
+.img {
+    width: 55rpx;
+    height: 55rpx;
+}
+
+.field-class {
+    width: 600rpx;
+}
+
+.u-wrp-bnr {
+    width: 92%;
+    margin: 0 auto;
+    display: block;
+}
+
+.u-img-slide {
+    border-radius: 20rpx;
+}
+
+.gd {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50rpx;
+    background: #F82E22;
+}
+
+.img1 {
+    width: 60rpx;
+    height: 55rpx;
+}
+
+.head {
+    text-align: center;
+    width: 96%;
+    margin: 20rpx auto;
+    font-size: 28rpx;
+    color: #8A8A8A;
+}
+
+.allMatch {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.match {
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 1rpx #F7F8FA solid;
+    font-size: 28rpx;
+}
+
+.box {
+    width: 150%;
+    height: 100rpx;
+    margin-left: 10rpx;
+    padding-right: 30rpx;
+    background-color: white;
+}
+
+.line {
+    height: 4.5rpx;
+    background: red;
+    margin-top: 10rpx;
+}
+
+.color {
+    color: red;
+}
+
+.cotent {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.msg-1 {
+    height: 90rpx;
+    line-height: 90rpx;
+    border-bottom: 1rpx #F7F8FA solid;
+    font-size: 28rpx;
+    color: #6383B0;
+}

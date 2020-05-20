@@ -1,0 +1,32 @@
+
+<view wx:if="{{allMatch.length===0}}" class="allMatch-1">
+ <view ><image src="{{banner[0].imageUrl}}" class="image-url" /></view>
+ <view wx:if="{{history.length>0}}">
+    <view class="flex,j-content,m-top2">
+    <view >搜索历史</view>
+    <view bind:tap="clickTo"><image src="../../../assets/images/sx.png" class="sx" /></view>
+    </view>
+    <view  class="flex,wrap">
+    <view wx:for="{{history}}" wx:key="index" class="m-left2,m-top1,tabs" data-searchWord="{{item}}" bind:tap="sendWord">
+    {{item}}
+    </view>
+    </view>
+  </view>
+  <view class="hot">热搜榜</view>
+  <view class="flex,wrap">
+    <view  wx:for="{{hot}}" wx:key="index" data-searchWord="{{item.searchWord}}" bind:tap="sendWord">
+      <view class="hot-1,flex,a-align,">
+       <view class="{{index<4?'text':''}},{{index>=4? 'index' : ''}}">{{index+1}}</view> 
+       <view class="m-left2">
+          <view class="flex,a-align,hot-3">
+          <view  class="hot-4">{{item.searchWord}}</view>
+            <image  wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}" 
+            data-index="{{index}}"  bindload="imageLoad" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"
+             class="m-left1,"/></view>
+          <view class="hot-2,m-top2">{{item.content}}</view>
+      </view>
+        </view>
+    </view>
+  </view>
+</view>
+

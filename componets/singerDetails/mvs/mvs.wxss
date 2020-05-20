@@ -1,0 +1,35 @@
+.play {
+    width: 95%;
+    top: 10rpx;
+    left: -380rpx;
+    font-size: 26rpx;
+    color: white;
+    justify-content: flex-end;
+}
+
+.imgplay {
+    width: 25rpx;
+    height: 25rpx;
+    padding-right: 6rpx;
+}
+
+.v-title {
+    font-size: 28rpx;
+}
+
+.c-img {
+    width: 280rpx;
+    height: 180rpx;
+    border-radius: 10rpx;
+}
+
+.hot-2 {
+    font-size: 24rpx;
+    color: #ABABAB;
+}
+
+.m-content {
+    width: 92%;
+    margin: 0 auto;
+    padding-bottom: 40rpx;
+}

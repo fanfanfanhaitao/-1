@@ -1,0 +1,42 @@
+/* pages/singerDetails/singerDetails.wxss */
+
+.pic-bg {
+    width: 100%;
+    height: 550rpx;
+}
+
+.name {
+    top: 380rpx;
+    width: 95%;
+    color: white;
+    font-size: 38rpx;
+    font-weight: bold;
+}
+
+.sing-content {
+    width: 100%;
+    height: 600rpx;
+    top: 500rpx;
+    background-color: white;
+    border-radius: 30rpx;
+}
+
+.box {
+    width: 90%;
+    height: 100rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    /* border-top-left-radius: 30rpx;
+    border-top-right-radius: 30rpx; */
+    background-color: white;
+}
+
+.line {
+    height: 4.5rpx;
+    background: red;
+    margin-top: 10rpx;
+}
+
+.color {
+    color: red;
+}

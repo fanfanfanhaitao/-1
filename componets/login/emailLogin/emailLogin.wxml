@@ -1,0 +1,25 @@
+
+<view class="content">
+          <view class="flex,a-align">
+          <image src="../../../assets/images/must.png" class="must" />
+          <image src="../../../assets/images/email.png" class="phone" />
+          <text class="m-left1,text">邮箱</text>
+          <input class="m-left2" placeholder="请输入网易邮箱"
+          maxlength='11'value="" bindinput ="mobileInput" bindblur="phone" bindfocus="focus" />
+          </view>
+          <view wx:if="{{num===1}}" class="color,phone-1">{{msg}}</view>
+        </view> 
+     <view class="content">
+         <view class="flex,a-align,content">
+        <image src="../../../assets/images/must.png" class="must" />
+        <image src="../../../assets/images/messg.png" class="phone" />
+        <text class="m-left1,text">密码</text>
+        <input class="m-left2" placeholder="请输入密码" password="true" 
+         minlength='6'value="" bindinput ="passwordInput" disabled="{{disabled}}" bindblur="password" bindfocus="passFocus" />
+          </view>
+        <view wx:if="{{number===1}}" class="color,phone-1">{{message}}</view>
+     </view>
+          <view class="login,flex,j-content,a-align">
+              <van-button type="warning" custom-class="custom-class" bind:tap="goRegister">前往注册</van-button>
+              <van-button color="#F86249" custom-class="custom-class" bindtap='btnclick'>立即登录</van-button>
+          </view>

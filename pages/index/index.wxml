@@ -1,0 +1,115 @@
+<view wx:if="{{active===0}}">
+<view class="flex,m-top2,a-align,j-content1">
+  <view ><image src="../../assets/images/tgsx.png" class="img"></image></view>
+  <view><van-search shape="round" placeholder="{{realkeyword}}" field-class="field-class" bind:focus="clickItem" /></view>
+</view>
+
+<swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+  <block wx:for="{{banner}}" wx:key="index">
+    <swiper-item>
+      <image src='{{item.imageUrl}}' bindload="imageLoad"
+            style="width:{{imgwidth}}rpx; height:{{imgheight }}rpx;"  class='u-img-slide'  mode='aspectFill'></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="flex,j-content,head">
+    <view >
+     <view  class="gd,flex,a-align,j-content3,wrap">
+       <image src="../../assets/images/recommend.png" class="img1"></image>
+   </view>
+   <view class="m-padding">每日推荐</view>
+   </view>
+     <view >
+     <view  class="gd,flex,a-align,j-content3,wrap">
+       <image src="../../assets/images/gd.png" class="img1"></image>
+   </view>
+   <view class="m-padding">歌单</view>
+   </view>
+   
+     <view >
+     <view  class="gd,flex,a-align,j-content3,wrap">
+       <image src="../../assets/images/rank.png" class="img1"></image>
+   </view>
+   <view class="m-padding">排行榜</view>
+   </view>
+    
+     <view >
+     <view  class="gd,flex,a-align,j-content3,wrap">
+       <image src="../../assets/images/radio.png" class="img1"></image>
+   </view>
+   <view class="m-padding">电台</view>
+   </view>
+    
+     <view >
+     <view  class="gd,flex,a-align,j-content3,wrap">
+       <image src="../../assets/images/live.png" class="img1"></image>
+   </view>
+   <view class="m-padding">直播</view>
+   </view>
+</view>
+<sheet result="{{result}}"></sheet>
+<newplay albums="{{albums}}" data="{{data}}" ></newplay>
+<newForces  Song="{{Song}}" program="{{program}}" more="{{more}}"></newForces>
+</view>
+<view wx:if="{{active===1}}">
+  <van-search
+  value="{{ value }}"
+  placeholder="{{realkeyword}}"
+  show-action
+  shape="round"
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+  bind:change="onChange"
+  bind:clear="onClear"
+/>
+<view wx:if="{{allMatch.length>0}}" class="allMatch">
+   <view class="msg-1" data-keyword="{{msg}}" bind:tap="searchKeyword">搜索 "{{msg}}"</view>
+   <view wx:for="{{allMatch}}" wx:key="index" class="match" data-keyword="{{item.keyword}}" bind:tap="searchKeyword">
+     {{item.keyword}}
+   </view>
+</view>
+  <search wx:if="{{number==0}}" realkeyword="{{realkeyword}}" 
+    allMatch="{{allMatch}}" hot="{{hot}}" banner="{{banner}}"
+    history="{{history}}"
+    bind:sendWord="sendWord"
+  ></search>
+  <view wx:if="{{number===1}}">
+    <scroll-view  scroll-x   class='scroll-container'>
+       <van-sticky>
+    <view class="flex,j-content,a-align,box">
+     <view wx:for="{{tab}}" wx:key="index" class="box-1" >
+        <view data-index='{{index}}' data-type="{{item.type}}" bind:tap="clickItem1" class="{{active1===index ? 'color' : ''}}">{{item.title}}</view>
+        <view class="line" wx:if="{{active1===index}}"></view>
+     </view>
+  
+  </view>
+    </van-sticky>
+  </scroll-view>
+    <view class="cotent">
+        <view wx:if="{{active1===0}}">
+           <comprehensive mv="{{mv}}" artist="{{artist}}" album="{{album}}" search="{{search}}"></comprehensive>   
+        </view>
+        <view wx:if="{{active1===1}}">
+          <songs search="{{search}}"></songs>
+        </view>
+        <view wx:elif="{{active1===2}}">
+         <playLists search="{{search}}"></playLists>
+        </view>
+        <view wx:elif="{{active1===3}}">
+          <artists search="{{search}}"></artists>
+        </view>
+        <view wx:elif="{{active1===4}}">
+          <albums search="{{search}}"></albums>
+        </view>
+         <view wx:elif="{{active1===5}}">
+          <videos search="{{search}}"></videos>
+        </view>
+         <view wx:elif="{{active1===6}}">
+          <djRadios search="{{search}}"></djRadios>
+        </view>
+        <view wx:elif="{{active1===7}}">
+          <users search="{{search}}"></users>
+        </view>
+    </view>
+  </view>
+</view>

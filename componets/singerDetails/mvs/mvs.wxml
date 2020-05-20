@@ -1,0 +1,13 @@
+ <view class="m-content">
+ <view class="flex,m-top2,a-align,relative" wx:for="{{mvs}}" wx:key="index">
+       <view class="absolute,play,flex,a-align">
+            <image src="../../../assets/images/playcount.png" class="imgplay"></image>
+             {{item.playCount}}
+        </view>
+       <view ><image src="{{item.imgurl16v9}}" class="c-img" /></view>
+       <view class="m-left2">
+           <view class="v-title">{{item.name}}</view>
+           <view class="hot-2,m-top2">{{item.publishTime}}</view>
+       </view>
+   </view>
+</view>

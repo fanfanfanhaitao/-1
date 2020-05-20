@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "playlist": "../../componets/songSheet/playlst"
+    },
+    "navigationStyle": "custom"
+}

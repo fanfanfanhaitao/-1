@@ -1,0 +1,10 @@
+   <view class="flex,a-align,m-top2"  wx:for="{{search.userprofiles}}" wx:key="index">
+        <image src="{{item.avatarUrl}}" class="player" />
+        <view class="m-left2">
+            <view class="flex,a-align">{{item.nickname}}
+                <image wx:if="{{item.gender===1}}" src="../../../assets/images/man.png" class="m-left2,man1" />
+                <image wx:if="{{item.gender===2}}" src="../../../assets/images/gril.png" class="m-left2,man" />
+            </view>
+             <view class="overflow,ture,m-top1,hot-2">{{item.signature}}</view>
+        </view>
+    </view>

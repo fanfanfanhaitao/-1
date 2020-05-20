@@ -1,0 +1,64 @@
+/* pages/login/login.wxss */
+
+.box {
+    width: 90%;
+    height: 100rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    /* border-top-left-radius: 30rpx;
+    border-top-right-radius: 30rpx; */
+    background-color: white;
+}
+
+.line {
+    height: 4.5rpx;
+    background: red;
+    margin-top: 10rpx;
+}
+
+.color {
+    color: red;
+}
+
+.m-content {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.must {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.phone {
+    width: 40rpx;
+    height: 35rpx;
+}
+
+.phone1 {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.text {
+    width: 100rpx;
+}
+
+.content {
+    height: 100rpx;
+}
+
+.login {
+    width: 75%;
+    height: 200rpx;
+    margin: 0 auto;
+}
+
+.custom-class {
+    width: 220rpx;
+}
+
+.phone-1 {
+    margin-left: 220rpx;
+    font-size: 28rpx;
+}

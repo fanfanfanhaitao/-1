@@ -1,0 +1,64 @@
+
+<view class="relative">
+    <image class="head-1" src="{{list.album.blurPicUrl}}" />
+    <view class="body,absolute,flex,a-align,j-content">
+     <view bind:tap="backTo"> <image src="../../assets/images/back.png" class="back"></image></view>
+      <view >专辑</view>
+    </view>
+    <view class="flex,absolute,name,j-content">
+        <view class="relative">
+             <view ><image src="{{list.album.blurPicUrl}}" class="cover" /></view>
+        </view>
+        <view class="m-left2">
+            <view class="name-color">{{list.album.name}}</view>
+             <view class="name-color1">
+                <span class="name-color2">歌手：{{list.album.artists[0].name}}</span>
+             </view>
+             <view class="name-color3">发行时间：{{list.album.publishTime}}</view>
+             <view class="over,m-top2,name-color3">{{list.album.description}}</view>
+        </view>
+    </view>
+    <view class="flex,j-content,absolute,downloda">
+        <view class="text-center">
+            <image src='../../assets/images/xx.png' class="src" />
+             <view class="m-top1">{{list.album.info.commentCount}}</view>
+        </view>
+         <view  class="text-center">
+            <image src='../../assets/images/fx.png' class="src" />
+            <view  class="m-top1">{{list.album.info.shareCount}}</view>
+        </view>
+         <view  class="text-center">
+            <image src='../../assets/images/down.png' class="src" />
+             <view  class="m-top1">下载</view>
+        </view>
+         <view  class="text-center">
+            <image src='../../assets/images/dx.png' class="src" />
+            <view  class="m-top1">多选</view>
+        </view>
+    </view>
+  <view class="top-1,absolute">
+     <view class="list">
+   <view class="playhead">
+      <view class="flex,a-align,j-content,allplay">
+          <view class="flex,a-align">
+          <image src="../../assets/images/playmore.png" class="playall" />
+          <span class="sp-1">播放全部</span><span class="sp-2">(共<span class="sp-3">{{list.songs.length}}</span>首)</span>
+          </view>
+          <view class="sub"><span class="sp-4">＋收藏 </span></view>
+      </view>
+   </view>  
+     <view class="list-1,flex,a-align,j-content" wx:for="{{list.songs}}" wx:key="index">
+         <view class="flex,a-align">
+             <span class="play-name">{{index+1}}</span>
+            <view > <view class="play-name1,overflow">{{item.name}}</view>
+                   <view class="p-name,overflow">{{item.ar[0].name}} - {{item.name}}</view>
+            </view>
+        </view>
+         <view class="flex,list-2,a-align,relative">
+           <view wx:if="{{item.mv!==0}}"><image src="../../assets/images/plmv.png" class="plmv" /></view>
+           <view class="absolute,list-3"><image src="../../assets/images/mall.png" class="plmv" /></view>
+         </view>
+     </view>
+</view>
+  </view>    
+</view>

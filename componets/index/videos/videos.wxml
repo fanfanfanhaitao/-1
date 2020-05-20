@@ -1,0 +1,11 @@
+  <view class="flex,m-top2,a-align,relative" wx:for="{{search.videos}}" wx:key="index">
+       <view class="absolute,play,flex,a-align">
+            <image src="../../../assets/images/playcount.png" class="imgplay"></image>
+             {{item.playTime}}
+        </view>
+       <view ><image src="{{item.coverUrl}}" class="c-img" /></view>
+       <view class="m-left2">
+           <view class="v-title">{{item.title}}</view>
+           <view class="hot-2,m-top2">by {{item.creator[0].userName}}</view>
+       </view>
+   </view>
